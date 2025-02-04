@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basics</title>
+    <style>
+        body {
+            background-color: pink;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            color: white;
+            font-size: 3em;
+        }
+        .shop-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .shop {
+            text-align: center;
+        }
+        .shop img {
+            width: 300px;
+            height: auto;
+            border-radius: 10px;
+        }
+        hr {
+            margin: 40px auto;
+            width: 80%;
+            border: 1px solid black;
+        }
+        .footer {
+            text-align: right;
+            font-style: italic;
+            font-family: monospace;
+            padding: 20px;
+            margin-right: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to our Shop! ✨</h1>
+    <div class="shop-container">
+        <div class="shop">
+            <img src="https://laz-img-cdn.alicdn.com/tfs/TB1PApewFT7gK0jSZFpXXaTkpXa-200-200.png" alt="Shop 1">
+            <p><a href="https://pages.lazada.co.th/wow/gcp/route/lazada/th/upr_1000345_lazada/channel/th/upr-router/th?amp%3Bforce_ssr_render=true&amp%3Bhybrid=1&amp%3Blzd_navbar_hidden=true&amp%3Bscm=1003.4.icms-zebra-5000381-2586950.OTHER_5987515477_4957984&at_iframe=1&data_prefetch=true&disable_pull_refresh=true&disable_smb=true&downgrade=redirect&exlaz=e_Cp9VFUgp8DBsbdaDA0DvZJn9Ji3%25252FSTAWDAo3n60nGqFwfKd6uf5SzAoQyImlfTPCB%25252F%25252FWJ%25252BYBXH4Kz7NNbuv8%25252BxlguXCOM6NHOeOaz2oUA1QUr03zp0NFmL9lxH8yN0%25252FjKZK9VS6%25252FklIouqEhUVJDR%25252BItvEl8y%25252Bl1flZiSHgvbO%25252FIckKsgz0U3ys9CgXTnW7yzQxz6eRCsIp4uECys3%25252B8WXDbkOG3bWrLwfApO9Gl%25252FMHX8ihLrvz8X84ULf1%25252B7YbuNk8SeV5niRyNlTK%25252BMXwmyKTkRe6CXsYl5qKIpQcLopkKMOkonQnZqHV0ZvOeGENU&gad_source=1&hide_h5_title=true&hybrid=1&lzd_navbar_hidden=true&prefetch_replace=1&skuIds=4260125983%2C351896542%2C3574228599%2C3616638211%2C3738675575%2C341586883%2C2732215311&spm=a2o4m.home.flashSale.1.4ec22a80I7CzUg&wh_pid=%2Flazada%2Fchannel%2Fth%2Fshopping-guide%2Flazflash&wx_navbar_transparent=true" target="_blank">Visit Shop 1</a></p>
+        </div>
+        <div class="shop">
+            <img src="data:image/png;base64,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" alt="Shop 2">
+            <p><a href="https://shopee.co.th/?gad_source=1&gclid=CjwKCAiA74G9BhAEEiwA8kNfpe1xmvXY3bhbhtu5XsnJV74G5O_aqZd9ddpZEJWnvDY7pgocrALJaRoCPdIQAvD_BwE" target="_blank">Visit Shop 2</a></p>
+        </div>
+    </div>
+    <hr>
+    <div class="footer">
+        &copy; wil 2025
+    </div>
+</body>
+</html>
