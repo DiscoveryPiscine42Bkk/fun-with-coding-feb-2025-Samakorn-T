@@ -1,0 +1,40 @@
+/* Reset default margin, padding, and box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Make sure the HTML and body take up the full viewport */
+html, body {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Table styling */
+table {
+    width: 100vw;
+    height: 100vh;
+    border-collapse: collapse;
+}
+
+/* Table cells */
+td {
+    text-align: center;
+    font-size: 2vw; /* Responsive font size */
+    border: 1px solid black;
+    width: 50%;
+}
+
+/* First cell background color */
+.first-cell {
+    background-color: #c4d69f; /* Light green */
+}
+
+/* Second cell background color */
+.second-cell {
+    background-color: #f4c7c3; /* Light red */
+}
