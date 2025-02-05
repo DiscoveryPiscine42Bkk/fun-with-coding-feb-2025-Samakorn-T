@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        input, select, button {
+            margin: 10px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Basic Calculator</h1>
+    <input type="text" id="leftOperand" placeholder="Enter first number">
+    <select id="operator">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+        <option value="%">%</option>
+    </select>
+    <input type="text" id="rightOperand" placeholder="Enter second number">
+    <button id="calculateBtn">Try me!</button>
+
+    <script>
+        document.getElementById('calculateBtn').addEventListener('click', function() {
+            const left = document.getElementById('leftOperand').value;
+            const right = document.getElementById('rightOperand').value;
+            const operator = document.getElementById('operator').value;
+
+            if (!isPositiveInteger(left) || !isPositiveInteger(right)) {
+                alert('Error :(');
+                console.log('Error :(');
+                return;
+            }
+
+            const num1 = parseInt(left);
+            const num2 = parseInt(right);
+
+            if ((operator === '/' || operator === '%') && num2 === 0) {
+                alert("It's over 9000!");
+                console.log("It's over 9000!");
+                return;
+            }
+
+            let result;
+            switch (operator) {
+                case '+': result = num1 + num2; break;
+                case '-': result = num1 - num2; break;
+                case '*': result = num1 * num2; break;
+                case '/': result = num1 / num2; break;
+                case '%': result = num1 % num2; break;
+            }
+
+            alert(`Result: ${result}`);
+            console.log(`Result: ${result}`);
+        });
+
+        function isPositiveInteger(value) {
+            const num = Number(value);
+            return Number.isInteger(num) && num >= 0;
+        }
+
+        setInterval(() => {
+            alert('Please, use me...');
+        }, 30000);
+    </script>
+</body>
+</html>
