@@ -1,19 +1,21 @@
-function toggleMenu() {
-    const menu = document.getElementById('nav-menu');
-    menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
-}
-
-function isInViewport(el) {
-    const rect = el.getBoundingClientRect();
-    return rect.top >= 0 && rect.bottom <= window.innerHeight;
-}
-function handleScroll() {
-    const experienceItems = document.querySelectorAll('.experience-item');
-    experienceItems.forEach(item => {
-        if (isInViewport(item)) {
-            item.classList.add('visible');
-        }
+$(document).ready(function () {
+    $(".hamburger").click(function () {
+        $("#nav-menu").slideToggle();
     });
-}
-window.addEventListener('scroll', handleScroll);
-handleScroll();
+
+    function isInViewport(element) {
+        let rect = element.get(0).getBoundingClientRect();
+        return rect.top >= 0 && rect.bottom <= $(window).height();
+    }
+
+    function handleScroll() {
+        $(".experience-item").each(function () {
+            if (isInViewport($(this))) {
+                $(this).addClass("visible");
+            }
+        });
+    }
+
+    $(window).on("scroll", handleScroll);
+    handleScroll();
+});
