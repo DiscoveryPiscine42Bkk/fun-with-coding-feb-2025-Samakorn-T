@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Samakorn Theinthong</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        /* General Styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+        }
+        
+        /* Navigation Bar */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+            z-index: 1000;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 15px;
+            margin: 0 10px;
+            font-size: 18px;
+        }
+        .navbar a:hover {
+            background: #555;
+        }
+
+        /* Parallax Section */
+        .parallax {
+            height: 100px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        /* Parallax Backgrounds */
+        .about-parallax {
+            background-image: url('https://source.unsplash.com/1600x900/?technology,abstract');
+        }
+        .showcase-parallax {
+            background-image: url('https://t4.ftcdn.net/jpg/04/61/47/03/360_F_461470323_6TMQSkCCs9XQoTtyer8VCsFypxwRiDGU.jpg');
+        }
+        .contact-parallax {
+            background-image: url('https://t4.ftcdn.net/jpg/04/61/47/03/360_F_461470323_6TMQSkCCs9XQoTtyer8VCsFypxwRiDGU.jpg');
+        }
+
+        /* Container */
+        .container {
+            width: 60%;
+            margin: auto;
+            padding: 80px 0;
+        }
+
+        /* Section Styling */
+        .section {
+            padding: 50px;
+            background: white;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .section h2 {
+            color: #603f3f;
+            font-weight: bolder;    
+            font-size: 40px;
+        }
+        .section h3 {
+            color: #f5a623;
+            font-size: 30px;
+            margin-top: -30px;
+            font-weight: bolder;
+        }
+        .section p {
+            color: #141414;
+            font-size: 20px;
+            font-weight: bold;
+            line-height: 10px;
+        }
+        .section p1 {
+            color: #7e0909;
+            font-size: 25px;
+            font-weight: bold;
+            line-height: normal;
+            margin-top: -30px;
+        }
+
+        .section ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .section ul li {
+            margin: 10px 0;
+            font-size: 20px;
+            font-weight: normal;
+            line-height: 18px;
+        }
+
+        /* Contact Section */
+        .contact {
+            text-align: center;
+            padding: 50px;
+            background: #333;
+            color: white;
+        }
+        .contact h2 {
+            color: white;
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+        .contact a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .contact p {
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        .contact a:hover {
+            color: #f5a623;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <a href="../index.html">Home</a>
+        <a href="#about">About</a>
+        <a href="#showcase">Showcase</a>
+        <a href="#contact">Contact</a>
+    </div>
+
+    <!-- About Section -->
+    <div class="parallax about-parallax"></div>
+    <div class="container">
+        <section id="about" class="section">
+            <img src="IMG_6238.jpg" alt="Profile Picture" style="width: 150px; border-radius: 50%;">
+            <h2>Samakorn Theinthong</h2>
+            <h3>Chemical Engineering Student</h3>
+            <p1>Bachelor’s Degree in Chemical Engineering</p1>
+            <p>King Mongkut's Institute of Technology Ladkrabang</p>
+            <p>2021 – 2024 | GPA: 3.01(6 terms)</p>
+            <p1>High School: Math-Sci (EP)</p1>
+            <p>Aranyaprathet School</p>
+            <p>2018 – 2020 | GPA: 3.88</p>
+        </section>
+    </div>
+
+    <!-- Showcase Section -->
+    <div class="parallax showcase-parallax"></div>
+    <div class="container">
+        <section id="showcase" class="section">
+            <h2>Showcase</h2>
+            <div class="section">
+                <h3>Achievements</h3>
+                <ul>
+                    <li>Robot and Firmware Development Workshop</li>
+                    <li>KMITL Leadership Program</li>
+                    <li>Crossword Competition</li>
+                    <li>Sailing "Laser 27ᵗʰ"</li>
+                    <li>Edit Video Competition</li>
+                    <li>Sound Control Prechem</li>
+                </ul>
+            </div>
+            <div class="section">
+                <h3>Experience</h3>
+                <p1><strong>PTT Process Engineering Trainee</strong></p1>
+                <ul>
+                    <li>Pool Fire Analysis</li>
+                    <li>Structure Reinforcement</li>
+                    <li>Process Simulation</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+
+    <!-- Contact Section -->
+    <div class="parallax contact-parallax"></div>
+    <section id="contact" class="contact">
+        <h2>Contact</h2>
+        <a href="https://github.com/DiscoveryPiscine42Bkk/fun-with-coding-feb-2025-Samakorn-T/tree/main" target="_blank">GitHub</a>
+        <a href="https://www.facebook.com/s.ma.kr.theiyn.thxng?locale=th_TH" target="_blank">Facebook</a>
+        <a href="https://www.instagram.com/_sama_pkp_/" target="_blank">Instagram</a>
+        <p>Email: 64010868@kmitl.ac.th</p>
+        <p>Phone: (+66) 92-771-1212</p>
+    </section>
+
+</body>
+</html>
